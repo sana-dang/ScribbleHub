@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScribbleHub | Interactive Blog</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Theme Toggle -->
+<div class="theme-toggle">
+    <button id="toggleTheme">🌙 Dark Mode</button>
+</div>
+
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <h1>ScribbleHub</h1>
+        <p>Share, like, bookmark, and explore stories</p>
+    </div>
+</header>
+
+<!-- Main -->
+<main class="container">
+
+    <!-- Controls -->
+    <div class="controls">
+        <input type="text" id="searchBar" placeholder="Search stories...">
+        <select id="filterCategory">
+            <option value="all">All Categories</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Poetry">Poetry</option>
+            <option value="Diary">Diary</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <!-- Story Form -->
+    <section class="story-form">
+        <h2>Write Your Story</h2>
+        <input type="text" id="title" placeholder="Story Title">
+        
+        <select id="category">
+            <option value="" disabled selected>Select Category</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Poetry">Poetry</option>
+            <option value="Diary">Diary</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <textarea id="story" placeholder="Your story..." maxlength="500"></textarea>
+        <div id="charCount">0 / 500</div>
+        <button id="publishBtn">Publish</button>
+    </section>
+
+    <!-- Published Stories -->
+    <section class="published-stories">
+        <h2>Published Stories</h2>
+        <div id="storiesContainer" class="stories-grid"></div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 ScribbleHub</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
